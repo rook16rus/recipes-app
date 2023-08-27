@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import MainPage from "../../pages/MainPage/MainPage";
 import RecipesPage from "../../pages/RecipesPage/RecipesPage";
 import AboutPage from "../../pages/AboutPage/AboutPage";
+import RecipeSinglePage from "../../pages/RecipeSinglePage/RecipeSinglePage";
 
 function App() {
     return (
@@ -16,7 +17,8 @@ function App() {
                 <Intro />
                 {/*<MainPage />*/}
                 {/*<RecipesPage />*/}
-                <AboutPage />
+                {/*<AboutPage />*/}
+                <RecipeSinglePage />
             </main>
             <Footer />
         </div>

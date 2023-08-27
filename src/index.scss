@@ -241,6 +241,11 @@ button:focus {
   max-width: calc(1151px + 2 * 30px);
   margin: 0 auto;
   padding: 0 30px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: normal;
+
   @supports (width: max(20vw, 100px)) {
     padding-left: max(env(safe-area-inset-left, 1.4rem), 30px);
     padding-right: max(env(safe-area-inset-right, 1.4rem), 30px);
@@ -251,21 +256,69 @@ button:focus {
     padding-right: 20px;
   }
 
+  p {
+    margin: 25px 0;
+  }
+
+  ul, ol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin: 25px 0;
+  }
+
+  ul {
+    li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+
+      &::before {
+        content: '';
+
+        width: 8px;
+        height: 8px;
+        margin-top: 11px;
+        margin-left: 12px;
+        
+        border-radius: 50%;
+        background-color: #000;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: order;
+
+    li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+
+      &::before {
+        counter-increment: order;
+        content: counter(order) ".";
+
+        margin-left: 12px;
+      }
+    }
+  }
+
+  h1, h2, h3 {
+    margin: 25px 0;
+    font-weight: 700;
+  }
+
+  * {
+    max-width: 984px;
+  }
+
   *:first-child {
     margin-top: 0;
   }
 
   *:last-child {
     margin-bottom: 0;
-  }
-
-  p {
-    margin: 45px 0;
-
-    font-weight: 400;
-    font-size: 31px;
-    line-height: normal;
-    color: #000;
   }
 }
 
