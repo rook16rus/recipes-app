@@ -9,13 +9,15 @@ const RecipeList = () => {
                 <div className={styles.list__itemPhoto}>
                     <img src={recipePhoto} alt="Фото блюда"/>
                 </div>
-                <h3 className={styles.list__itemTitle}>Waffles</h3>
-                <p className={styles.list__itemText}>
-                    Great recipe to eat with friends in the morning.
-                </p>
-                <a className={styles.list__itemLink} href="#">
-                    See recipe
-                </a>
+                <div className={styles.list__itemContent}>
+                    <h3 className={styles.list__itemTitle}>Waffles</h3>
+                    <p className={styles.list__itemText}>
+                        Great recipe to eat with friends in the morning.
+                    </p>
+                    <a className={styles.list__itemLink} href="#">
+                        See recipe
+                    </a>
+                </div>
             </li>
         </ul>
     )
