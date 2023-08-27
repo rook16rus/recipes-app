@@ -4,7 +4,7 @@ import bgImg from './intro-bg.jpg'
 
 const Intro = () => {
     return (
-        <div className={styles.intro} style={{backgroundImage: `url(${bgImg})`, color: "red"}}>
+        <div className={styles.intro} style={{backgroundImage: `url(${bgImg})`}}>
             <h1 className={styles.intro__title}>
                 Get inspired, cook with passion and enjoy unforgettable moments at the table.
             </h1>
