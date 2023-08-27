@@ -3,6 +3,38 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 38px;
 
+  &--column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 65px;
+
+    .list__item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 0;
+    }
+
+    .list__itemPhoto {
+      width: 403px;
+      height: 100%;
+      min-height: 322px;
+    }
+
+    .list__itemContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      min-height: 322px;
+      padding: 48px;
+    }
+
+    .list__itemText {
+      max-width: 660px;
+    }
+  }
+
   &__item {
     display: flex;
     flex-direction: column;

@@ -1,10 +1,21 @@
+import classNames from "classnames";
+
 import styles from './RecipeList.module.scss';
 
 import recipePhoto from './recipe-1.jpg'
 
-const RecipeList = () => {
+type RecipeListProps = {
+    direction?: "column" | "row"
+}
+
+const RecipeList = ({direction = "row"}: RecipeListProps) => {
+    const clazz = classNames(
+        styles.list,
+        {[styles["list--column"]]: direction === "column"}
+    )
+
     return (
-        <ul className={styles.list}>
+        <ul className={clazz}>
             <li className={styles.list__item}>
                 <div className={styles.list__itemPhoto}>
                     <img src={recipePhoto} alt="Фото блюда"/>

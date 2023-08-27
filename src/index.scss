@@ -220,6 +220,22 @@ button:focus {
   }
 }
 
+.narrow-container {
+  width: 100%;
+  max-width: calc(1187px + 2 * 30px);
+  margin: 0 auto;
+  padding: 0 30px;
+  @supports (width: max(20vw, 100px)) {
+    padding-left: max(env(safe-area-inset-left, 1.4rem), 30px);
+    padding-right: max(env(safe-area-inset-right, 1.4rem), 30px);
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .main-wrapper {
   display: flex;
   flex-direction: column;

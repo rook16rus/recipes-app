@@ -2,8 +2,10 @@ import React from 'react';
 
 import Header from "../Header/Header";
 import Intro from '../Intro/Intro'
-import MainPage from "../../pages/MainPage/MainPage";
 import Footer from "../Footer/Footer";
+
+import MainPage from "../../pages/MainPage/MainPage";
+import RecipesPage from "../../pages/RecipesPage/RecipesPage";
 
 function App() {
     return (
@@ -11,7 +13,8 @@ function App() {
             <Header />
             <main>
                 <Intro />
-                <MainPage />
+                {/*<MainPage />*/}
+                <RecipesPage />
             </main>
             <Footer />
         </div>

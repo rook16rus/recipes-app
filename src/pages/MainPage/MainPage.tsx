@@ -1,17 +1,8 @@
-import RecipeList from "../../components/RecipeList/RecipeList";
-
-import styles from './MainPage.module.scss'
+import Wanted from "../../components/Wantend/Wanted";
 
 const MainPage = () => {
     return (
-        <section className={styles.wanted}>
-            <div className="container">
-                <h2 className={styles.wanted__title}>
-                    Most wanted recipes
-                </h2>
-                <RecipeList />
-            </div>
-        </section>
+        <Wanted />
     )
 }
 
