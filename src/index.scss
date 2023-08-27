@@ -236,6 +236,39 @@ button:focus {
   }
 }
 
+.text-container {
+  width: 100%;
+  max-width: calc(1151px + 2 * 30px);
+  margin: 0 auto;
+  padding: 0 30px;
+  @supports (width: max(20vw, 100px)) {
+    padding-left: max(env(safe-area-inset-left, 1.4rem), 30px);
+    padding-right: max(env(safe-area-inset-right, 1.4rem), 30px);
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 45px 0;
+
+    font-weight: 400;
+    font-size: 31px;
+    line-height: normal;
+    color: #000;
+  }
+}
+
 .main-wrapper {
   display: flex;
   flex-direction: column;
