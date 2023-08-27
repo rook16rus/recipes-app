@@ -26,3 +26,21 @@ function App() {
 }
 
 export default App;
+
+
+
+/*
+
+    @include mq('custom', 'max', 1024) {
+
+    }
+
+    @include mq('custom', 'max', 768) {
+
+    }
+
+    @include mq('custom', 'max', 640) {
+
+    }
+
+*/

@@ -1,11 +1,25 @@
+@import "../../media-mixin";
+
 .footer {
   padding: 85px 0;
 
   background-color: #FFDB63;
 
+  @include mq('custom', 'max', 1024) {
+    padding: 65px 0;
+  }
+
+  @include mq('custom', 'max', 768) {
+    padding: 45px 0;
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding: 26px 0;
+  }
+
   &__logo {
+    max-width: 100%;
     width: 416px;
-    height: 56px;
 
     img {
       width: 100%;

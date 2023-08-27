@@ -1,3 +1,9 @@
+@import "../../media-mixin";
+
 .recipeSingle {
   padding: 48px 0;
+
+  @include mq('custom', 'max', 640) {
+    padding: 24px 0;
+  }
 }

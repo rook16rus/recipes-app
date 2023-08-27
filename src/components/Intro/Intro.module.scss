@@ -1,3 +1,5 @@
+@import "../../media-mixin";
+
 .intro {
   position: relative;
   z-index: 1;
@@ -5,8 +7,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 362px;
+  min-height: 362px;
   padding: 20px;
+
+  @include mq('custom', 'max', 1024) {
+    min-height: 320px;
+  }
+
+  @include mq('custom', 'max', 768) {
+    min-height: 280px;
+  }
+
+  @include mq('custom', 'max', 640) {
+    min-height: 240px;
+  }
 
   &::before {
     content: '';
@@ -31,5 +45,17 @@
     line-height: normal;
     text-align: center;
     color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+      font-size: 36px;
+    }
+
+    @include mq('custom', 'max', 768) {
+      font-size: 32px;
+    }
+
+    @include mq('custom', 'max', 640) {
+      font-size: 28px;
+    }
   }
 }
