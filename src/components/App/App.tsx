@@ -17,8 +17,8 @@ function App() {
                 <Intro />
                 {/*<MainPage />*/}
                 {/*<RecipesPage />*/}
-                {/*<AboutPage />*/}
-                <RecipeSinglePage />
+                <AboutPage />
+                {/*<RecipeSinglePage />*/}
             </main>
             <Footer />
         </div>
