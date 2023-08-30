@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classNames from "classnames";
 
 import styles from './RecipeList.module.scss';
@@ -25,9 +26,9 @@ const RecipeList = ({direction = "row"}: RecipeListProps) => {
                     <p className={styles.list__itemText}>
                         Great recipe to eat with friends in the morning.
                     </p>
-                    <a className={styles.list__itemLink} href="#">
+                    <Link className={styles.list__itemLink} to="/recipe-single">
                         See recipe
-                    </a>
+                    </Link>
                 </div>
             </li>
             <li className={styles.list__item}>
@@ -39,9 +40,9 @@ const RecipeList = ({direction = "row"}: RecipeListProps) => {
                     <p className={styles.list__itemText}>
                         Great recipe to eat with friends in the morning.
                     </p>
-                    <a className={styles.list__itemLink} href="#">
+                    <Link className={styles.list__itemLink} to="/recipe-single">
                         See recipe
-                    </a>
+                    </Link>
                 </div>
             </li>
             <li className={styles.list__item}>
@@ -53,9 +54,9 @@ const RecipeList = ({direction = "row"}: RecipeListProps) => {
                     <p className={styles.list__itemText}>
                         Great recipe to eat with friends in the morning.
                     </p>
-                    <a className={styles.list__itemLink} href="#">
+                    <Link className={styles.list__itemLink} to="/recipe-single">
                         See recipe
-                    </a>
+                    </Link>
                 </div>
             </li>
         </ul>

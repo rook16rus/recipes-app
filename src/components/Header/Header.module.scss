@@ -64,6 +64,10 @@
     @include mq('custom', 'max', 768) {
       margin-right: 12px;
     }
+
+    a.active {
+      color: #FFDB63;
+    }
   }
 
   &__search {

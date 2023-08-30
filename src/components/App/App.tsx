@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from "react-router-dom";
 
 import Header from "../Header/Header";
 import Intro from '../Intro/Intro'
@@ -15,10 +16,12 @@ function App() {
             <Header />
             <main>
                 <Intro />
-                {/*<MainPage />*/}
-                <RecipesPage />
-                {/*<AboutPage />*/}
-                {/*<RecipeSinglePage />*/}
+                <Routes>
+                    <Route path="/" element={<MainPage />} />
+                    <Route path="/recipes" element={<RecipesPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/recipe-single" element={<RecipeSinglePage />} />
+                </Routes>
             </main>
             <Footer />
         </div>

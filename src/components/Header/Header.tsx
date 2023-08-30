@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import styles from "./Header.module.scss"
 
 import searchIcon from './search-icon.svg'
@@ -11,15 +13,15 @@ const Header = () => {
 
     const links: Array<TLink> = [
         {
-            link: "#",
+            link: "/",
             text: "Home"
         },
         {
-            link: "#",
+            link: "/recipes",
             text: "Recipes"
         },
         {
-            link: "#",
+            link: "/about",
             text: "About"
         },
     ]
@@ -36,7 +38,7 @@ const Header = () => {
                             links.map(({link, text}, i) => {
                                 return (
                                     <li className={styles.header__menuItem} key={i}>
-                                        <a href={link}>{text}</a>
+                                        <NavLink className={({isActive}) => (isActive ? styles.active : "")} to={link} >{text}</NavLink>
                                     </li>
                                 )
                             })
